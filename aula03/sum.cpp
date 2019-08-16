@@ -2,17 +2,22 @@
  * marco.mangan@pucrs.br
  * 2019-08-13
  * Para compilar e executar:
- * $ g++ sum.cpp -o sum
+ * $ g++ calculus.cpp sum.cpp -o sum
  * $ ./sum
  * Para depurar:
- * $ g++ -g sum.cpp -o sum
+ * $ g++ -ggdb calculus.cpp sum.cpp -o sum
  * $ gdb sum
  * $ break main
  * $ run
  * $ n
  * $ print n
  * $ print n2
+ * $ continue
  * $ quit
+ * No Google:
+ * man g++
+ * man gdb
+ *
  */
 #include <iostream>
 	
