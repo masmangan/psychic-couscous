@@ -1,0 +1,2 @@
+pit: pit.cpp triangle.cpp triangle.hpp
+	g++ pit.cpp triangle.cpp -o pit
