@@ -1,7 +1,7 @@
 #include <iostream>
 
 using namespace std;
-#define DEBUG 0 
+#define DEBUG 1 
 
 class Stack {
 
@@ -71,6 +71,30 @@ void Stack::dump() {
 
 int main() {
 	cout << "Pilha com classes" << endl;
+	Stack s1, s2;
+
+	s1.push(20);
+	s1.push(10);
+
+
+	s2.push(s1.pop());
+	s2.push(s1.pop());
 
 	return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
