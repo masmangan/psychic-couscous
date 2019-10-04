@@ -44,6 +44,19 @@ private:
 		print(n->right);
 	}
 
+	bool contains(Node* n, int k) {
+		if (n == nullptr) {
+			return false;
+		} else if (k < n->key) {
+			return contains(n->left, k);
+		} else if (k > n->key) {
+			return contains(n->right, k);
+		} else {
+			// key found; return true
+			return true;
+		}
+	}
+
 public:
 	BinarySearchTree() {
 		root = nullptr;
@@ -56,11 +69,13 @@ public:
 	}
 
 	void print() {
+		cout << "{{{" << endl;
 		print(root);
+		cout << "}}}" << endl;
 	}
 
 	bool contains(int k) {
-		// TODO: check if tree contains key
+		return contains(root, k);
 	}
 
 /*	
@@ -73,4 +88,17 @@ public:
 };
 
 
+int main() {
+	// TODO: create a tree
+	BinarySearchTree t;
+	// TODO: insert 10
+	t.insert(10);
+	// TODO: print tree
+	t.print();
+	// TODO: insert 20
+	t.insert(20);
+	// TODO: print tree
+	t.print();
 
+	return 0;
+}
